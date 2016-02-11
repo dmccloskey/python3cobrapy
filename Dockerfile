@@ -1,13 +1,13 @@
 # Dockerfile to build python3 images for constraint-based modeling
 # Based on Ubuntu
 
-# Set the base image to Ubuntu
-FROM ubuntu:latest
+# # Set the base image to Ubuntu
+# FROM ubuntu:latest
 
 # Add python3_scientific
 FROM dmccloskey/python3scientific:latest
-# Add optGpSampler
-FROM dmccloskey/optgpsampler
+# # Add optGpSampler
+# FROM dmccloskey/optgpsampler
 
 # File Author / Maintainer
 MAINTAINER Douglas McCloskey <dmccloskey87@gmail.com>
