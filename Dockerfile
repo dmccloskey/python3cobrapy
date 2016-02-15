@@ -91,12 +91,19 @@ RUN apt-get update && apt-get install -y libxml2 \
 	libbz2-dev \
 	libglpk-dev
 
-#install python packages using pip3
+# install python packages using pip3
 RUN pip3 install --upgrade pip
 RUN pip3 install --no-cache-dir python-libsbml
 RUN pip3 install --no-cache-dir cobra
 RUN pip3 install --no-cache-dir escher
 RUN pip3 install --upgrade
 
-#cleanup
+# cleanup
 RUN apt-get clean
+
+# switch back to user
+WORKDIR $HOME
+USER user
+
+# set the command
+CMD ["python3"]
