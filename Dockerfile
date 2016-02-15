@@ -28,12 +28,11 @@ WORKDIR /user/local/glpk-4.57
 RUN ./configure
 RUN make
 RUN make check
-#RUN make install
-RUN sudo make install
+RUN make install
 RUN make distclean
 
 # add glpk libraries to path
-RUN sudo ldconfig
+RUN ldconfig
 
 # Cleanup
 WORKDIR /
