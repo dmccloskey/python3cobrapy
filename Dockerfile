@@ -46,11 +46,10 @@ RUN apt-get update -y \
 	&& apt-get clean
 
 # install python packages using pip3
-#RUN pip3 install --upgrade pip \
 RUN pip3 install --no-cache-dir python-libsbml \
-	&& pip3 install --no-cache-dir cobra \
-	&& pip3 install --no-cache-dir escher \
-	&& pip3 install --upgrade
+	cobra \
+	escher \
+	&&pip3 install --upgrade
 
 # switch back to user
 WORKDIR $HOME
