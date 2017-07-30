@@ -46,8 +46,9 @@ RUN apt-get update -y \
 	&& apt-get clean
 
 # install python packages using pip3
-RUN pip3 install --no-cache-dir python-libsbml \
-	cobra \
+RUN pip3 install --no-cache-dir \
+	#python-libsbml \
+	"cobra[all]" \
 	escher \
 	&&pip3 install --upgrade
 
